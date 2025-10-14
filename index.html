@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/wedding.css">
@@ -13,29 +13,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body ontouchstart="">
    
 
     <main>
         <div class="invitation-container min-h-screen relative overflow-hidden">
             <!-- Background image with flowers and rings -->
-            <div class="absolute inset-0">
+            <div class="absolute inset-0 filters">
+              <picture>
+                <!-- Image sources for different screen sizes -->
+                <source srcset="images/back1.jpg" media="(min-width: 1025px)">
+                <source srcset="images/back1.jpg" media="(min-width: 641px)">
+                <source srcset="images/back1.jpg" media="(max-width: 640px)">
+                <!-- Fallback image -->
               <img 
-                src="images/background.jpeg"
+                src="images/back1.jpg"
                 alt="Wedding background with rings and flowers"
-                class="w-full h-full object-cover"
+                  class="w-full h-full object-cover img-responsive object-center"
+                  loading="eager"
               />
-            </div>
+              </picture>             </div>
       
             <!-- Main invitation content positioned on white areas of background -->
-            <div class="relative z-10 min-h-screen flex flex-col justify-center items-center p-8 max-w-3xl mx-auto">
+            <div class="relative z-10 min-h-screen flex flex-col justify-start items-center p-8 pt-12 max-w-3xl mx-auto content">
               
               <div class="elegant-border w-full">
                 <!-- Bible verse - positioned in upper white area -->
                 <div class="text-center mb-8">
                   <p class="verse">
-                    "Therefore what God has joined together,<br />
-                    let no one separate."
+                    "THEREFORE WHAT GOD HAS JOINED TOGETHER,<br />
+                    LET NO ONE SEPARATE."
                   </p>
                   <p class="verse mt-2">MARK 10:9</p>
                 </div>
@@ -55,7 +62,7 @@
                 <div class="text-center mb-8">
                   <div class="space-y-2">
                     <h1 class="couple-name">Neha Abraham</h1>
-                    <p class="parent-names">D/O ABRAHAM JACOB & ANNAMMA JOHN</p>
+                    <p class="parent-names">D/O ABRAHAM JACOB & ANAMMA JOHN</p>
                     <p class="ampersand">&</p>
                     <h1 class="couple-name">Saitej Erupaka</h1>
                     <p class="parent-names">S/O SUNITHA & RAVINDER REDDY ERUPAKA</p>
@@ -81,7 +88,7 @@
                     <p class="event-date">Sunday, December 28, 2025 at 2:00 PM</p>
                     <p class="event-location mt-2">ST. GEORGE ORTHODOX CHURCH</p>
                     <p class="event-address">
-                    Thenganal Road, Manarcadu, Puthuppally
+                    Thenganal, Road, Manarcadu, Puthuppally
                     </p>
                   </div>
       
@@ -101,12 +108,14 @@
       
                 <!-- Contact info -->
                 <div class="text-center mt-6">
-                  <p class="contact-info">SHARING THE HAPPINESS: VIVIN ABRAHAM</p>
-                  <p class="contact-info mt-2">RSVP: +91 95260 23326</p>
+                  <p class="contact-info">Sharing the happiness: VIVIN ABRAHAM</p>
+                  <p class="contact-info mt-2">Contact: +91 95260 23326</p>
+                  <div class="rsvp-button-container mt-4">
+                    <a href="https://forms.gle/EJ39MNFUJxQvWD6U9" target="_blank" class="rsvp-button">RSVP Now</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-    <script src="js/main.js"></script>
+        </div>
 </body>
 </html>
