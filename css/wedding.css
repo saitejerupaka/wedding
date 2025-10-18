@@ -172,6 +172,16 @@ body {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+a.event-address {
+  color: #ffffff; /* Use gold-light color for better visibility */
+  text-decoration: underline; /* Add underline to indicate it's a link */
+  display: inline-block; /* Better touch target on mobile */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a.event-address:hover {
+  color: var(--gold); /* Slightly brighter gold on hover */
+}
 
 .contact-info {
   font-family: var(--font-montserrat);
