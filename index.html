@@ -176,7 +176,7 @@
   // Generate image paths
   const images = Array.from({ length: numberOfImages }, (_, i) => 
     `${imageFolder}${imagePrefix}${i + 1}${imageExtension}`
-  );
+  ).reverse();
   console.log(images);
 
   let currentIndex = 0;
